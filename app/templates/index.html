@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+{% block scripts %}
+{{super()}}
+
+<script>
+var figure = $(".video").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {
+    $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause();
+}
+</script>
+
+
+<script>
+var figure2 = $(".video2").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {
+    $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause();
+}
+</script>
+
+<script>
+var figure3 = $(".video3").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {
+    $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause();
+}
+</script>
+
+<script>
+var figure4 = $(".video4").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {
+    $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause();
+}
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+{% endblock %}
+
+
+        <h1>{{ _('Hello, %(username)s!', username=current_user.username) }}</h1>
+
+        <style>
+        #videosList {
+         max-width: auto;
+          overflow: hidden;
+        }
+
+        .video {
+          background-image:
+          url("{{url_for('static', filename='junie01.jpg')}}");
+          height: 960px;
+          width: 720px;
+          margin-bottom: 0px;
+        }
+
+        /* Hide Play button + controls on iOS */
+        video::-webkit-media-controls {
+            display:none !important;
+        }
+
+        #videosList2 {
+         max-width: auto;
+          overflow: hidden;
+        }
+
+        .video2 {
+          background-image:
+          url("{{url_for('static', filename='kyoto01.jpg')}}");
+          height: 960px;
+          width: 720px;
+          margin-bottom: 0px;
+        }
+
+        /* Hide Play button + controls on iOS */
+        video::-webkit-media-controls {
+            display:none !important;
+        }
+
+        #videosList3 {
+         max-width: auto;
+          overflow: hidden;
+        }
+
+        .video3 {
+          background-image:
+          url("{{url_for('static', filename='jack01.jpg')}}");
+          height: 960px;
+          width: 720px;
+          margin-bottom: 0px;
+        }
+
+        #videosList4 {
+         max-width: auto;
+          overflow: hidden;
+        }
+
+        .video4 {
+          background-image:
+          url("{{url_for('static', filename='milla01.jpg')}}");
+          height: 960px;
+          width: 720px;
+          margin-bottom: 0px;
+        }
+
+        .wrap {
+          white-space: pre-wrap; /* css-3 */
+          white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+          white-space: -pre-wrap; /* Opera 4-6 */
+          white-space: -o-pre-wrap; /* Opera 7 */
+          word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        th {
+          white-space: auto;
+          text-align: justify;
+          word-wrap: normal;
+
+          margin-left: 35px;
+        }
+
+        p {
+          margin-left: 35px;
+          margin-right: 35px;
+
+        }
+
+        h3 {
+          margin-left: 35px;
+          margin-right: 35px;
+        }
+        </style>
+
+        {% if not prev_url %}
+<table>
+  <tr>
+    <th>
+        <div id="videosList">
+
+        <div class="video">
+            <video class="thevideo" loop preload="none">
+              <source src="{{url_for('static', filename='wasserjunie_swing.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag.
+
+            </video>
+          </div>
+
+        </div>
+      </th>
+      <th>
+<h3> Junie is a very good dog</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+      </th>
+</tr>
+
+<br>
+
+<tr>
+  <th>
+    <h3>Image of Jack who is also a very good dog</h3>
+  </th>
+<th>
+        <div id="videosList3">
+
+        <div class="video3">
+            <video class="thevideo" loop preload="none">
+              <source src="{{url_for('static', filename='00000IMG_00000_BURST20190222124436082_COVER_zoom-in.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+
+        </div>
+</th>
+</tr>
+
+<tr>
+
+  <th>
+
+
+
+                <div id="videosList2">
+
+                <div class="video2">
+                    <video class="thevideo" loop preload="none">
+                      <source src="{{url_for('static', filename='kyoto1_zoom-in.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                </div>
+        <br>
+      </th>
+      <th>
+        <h3>Kyoto is obviously loved by everyone</h3>
+      </th>
+    </tr>
+
+<br>
+<tr>
+  <th>
+    <h3>Picture of Milla who is of course a very good dog</h3>
+  </th>
+<th>
+        <div id="videosList4">
+
+        <div class="video4">
+            <video class="thevideo" loop preload="none">
+              <source src="{{url_for('static', filename='mill2_dolly-zoom-in.mp4')}}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+
+        </div>
+</th>
+</tr>
+      </table>
+
+      {% endif %}
+
+
+        {% if form %}
+        {{ wtf.quick_form(form) }}
+        <br>
+        {% endif %}
+        {% for post in posts %}
+            {% include '_post.html' %}
+        {% endfor %}
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="previous{% if not prev_url %} disabled{% endif %}">
+                    <a href="{{ prev_url or '#' }}">
+                        <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+                    </a>
+                </li>
+                <li class="next{% if not next_url %} disabled{% endif %}">
+                    <a href="{{ next_url or '#' }}">
+                        {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+{% endblock %}
